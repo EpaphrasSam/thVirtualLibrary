@@ -13,7 +13,7 @@ function ImagePreview({ file }) {
     const reader = new FileReader();
 
     reader.readAsDataURL(file);
-    window.location.href = window.location;
+    window.location.reload()
     reader.onload = () => {
       const img = reader.result;
       setTimeout(() => {
