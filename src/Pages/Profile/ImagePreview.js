@@ -21,6 +21,7 @@ function ImagePreview({ file }) {
       }, 3000);
       window.localStorage.setItem('Dp', img);
     }
+
   }
 
   return (

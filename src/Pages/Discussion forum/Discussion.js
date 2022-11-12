@@ -69,7 +69,7 @@ const Discussion = () => {
                         <div className='px-2 pt-1' >
                             <div className='flex'>
                                 <div className='relative'>
-                                    <div className='absolute top-3 left-0 flex items-center pl-1 z-1 w-[20px]'>
+                                    <div className='absolute top-3 left-0 flex items-center pl-1 w-[20px] z-1'>
                                         <AiOutlineSearch className='text-white' />
                                     </div>
 
