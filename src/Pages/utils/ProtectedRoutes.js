@@ -4,11 +4,9 @@ import Auth from "./Auth";
 import Login from '../Login';
 import Signup from '../Signup';
 import Home from '../Home';
-// import Program from '../Program';
 import Programme from '../Programme Page/Programme';
 import Course from '../Course';
 import Logout from "./Logout";
-// import Settings from "../settings";
 import Profile from "../Profile/ProfileInputs";
 import Discussion from "../Discussion forum/Discussion";
 import Forum from "../Discussion forum/Forum";
@@ -18,10 +16,8 @@ import ResetPassword from "../PasswordChange/ResetPassword";
 import AboutUs from "../AboutUs/Aboutus";
 import { Navigate } from 'react-router-dom';
 import { useRoutes } from "react-router-dom";
-// import Videos from "../Videos";
-// import Tutor from "../TutorPage/TutorDisplay/Tutor"
-// import Form_info from "../TutorPage/FormComponents/Form/Form"
-import Display from "./Display";
+// import Tutor from "../TutorPage/TutorDisplay/Tutor";
+// import FormInfo from "../TutorPage/FormComponents/Form/Form";
 
 const ProtectedRoutes = () => {
     const { user } = useAuth();
@@ -74,10 +70,10 @@ const ProtectedRoutes = () => {
             path: "/discussion",
             element: user ? <Discussion /> : <Navigate replace to="/" />
         },
-        {
-            path: "/test",
-            element: <Display />
-        },
+        // {
+        //     path: "/tutorform",
+        //     element: <FormInfo />
+        // },
         {
             path: "/discussion/:idm",
             element: user ? <Forum /> : <Navigate replace to="/" />
@@ -86,6 +82,10 @@ const ProtectedRoutes = () => {
             path: "/404",
             element: user ? <PageNotFound /> : <Navigate replace to="/" />
         },
+        // {
+        //     path: "/tutors",
+        //     element:  <Tutor />
+        // },
         {
             path: "*",
             element: <Navigate replace to="/404" />
